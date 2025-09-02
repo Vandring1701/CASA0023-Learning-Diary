@@ -1,0 +1,29 @@
+---
+title: "Google Earth Engine I"
+---
+
+## Summary
+
+Geography—this week introduced Google Earth Engine (GEE), the cloud platform for planetary-scale geospatial analysis. In its capabilities it combines a multi-petabyte archive of satellite imagery, enabling an investigator to analyse and visualise changes on the Earth's surface directly from a browser through the APIs of JavaScript or Python. One of the best things of this platform is that it is very accessible; rather than forcing a user to download terabytes of satellite data locally, the user accesses one of the many pre-hosted image collections such as Landsat, Sentinel, MODIS, and many others, and can execute their highly complicated algorithm right there in the cloud.  
+
+We also learned about zonal statistics types such as using `reduceRegion()` for summarising pixel values over a feature, or `reduceRegions()`, which applies the same operation over a feature collection. Time-series processing is covered in the lecture, including linear trend analyses per-pixel using `linearFit()` and `linearRegression()` functions. With these functions, users can detect long-term patterns such as vegetation change or urban growth; I was not aware that it was so straightforward to do this within a browser-based tool.  
+
+The practical section gave examples of computing NDVI in GEE, filtering satellite images by date and cloud cover, clipping them to the region of interest, and then applying reducers to summarise data over time and space. We did not undertake a full analysis just yet, but these code examples were relevant and helpful, and I now feel capable of writing my own scripts in GEE.
+
+## Applications
+
+The introduced tools are potentially suited for a wide range of environmental monitoring and change-detection tasks. In the words of Doblas et al. (2022), **DETER-R** is presented as a near-real-time alert system for forest disturbances in the Brazilian Amazon. It is based on Sentinel-1 time series data processed in GEE. Making full use of GEE in managing extensive image collections, deforestation could be monitored even in circumstances of incessant cloud cover, and radar imagery was the key to that ability. The system performs weekly time-series analyses to detect anomalies in backscatter values that may have denoted loss in tree cover.  
+
+There is ample room for the development of the concepts we covered in class, especially the `map()` function applied to time series, reducers used to aggregate technical indicators, and classifiers for identifying abrupt changes. Hao et al. (2019) provide another case study on the utilization of GEE in the study of the Three Gorges Reservoir over a period of 15 years in terms of land use change and climate change-induced variations. Their technique included selecting data, setting area and dates, creating masks for clouds, and examining seasonal medians. This closely mirrored what we were learning in class, and showed how GEE facilitates efficient analysis of large datasets across various geographies and timeframes.
+
+## Reflection
+
+This week was very important because I learned more about current geo-spatial data processing procedures that are increasingly cloud-based, including direct sensor integration. The introduction of Google Earth Engine totally changed how I saw remote sensing. In the past, working with satellite images required heavy equipment, powerful computers, and lengthy downloads. Now, many of these barriers have been removed.  
+
+The use of Google Earth Engine encourages the principles of open science; scripts can be easily shared via links, projects are reproducible, and research is more transparent. This also allows results to be shared with non-professionals, policymakers, or community groups with limited resources. As a consequence, the ability to work with global EO data archives is extremely helpful for those without access to powerful computer infrastructure.
+
+## References
+
+Doblas, J., Reis, M.S., Belluzzo, A.P., Quadros, C.B., Moraes, D.R., Almeida, C.A., Maurano, L.E., Carvalho, A.F., Sant’Anna, S.J. and Shimabukuro, Y.E., 2022. **DETER-R: an operational near-real time tropical forest disturbance warning system based on Sentinel-1 time series analysis.** *Remote Sensing*, 14(15), p.3658.  
+
+Hao, B., Ma, M., Li, S., Li, Q., Hao, D., Huang, J., Ge, Z., Yang, H. and Han, X., 2019. **Land use change and climate variation in the Three Gorges Reservoir catchment from 2000 to 2015 based on the Google Earth Engine.** *Sensors*, 19(9), p.2118.  

@@ -1,0 +1,40 @@
+---
+title: "Getting started with remote sensing"
+---
+
+## Summary  
+
+The first week of this course was interesting, setting the foundation on remote sensing. I was surprised about how immense the scope is—being practically anything including just satellite imagery. It involves data coming from satellites, drones, aerial photography, and furthermore from possibly even handheld devices, collected by either passive or active sensors. Passive sensors detect energy reflected from the sun located in the electromagnetic spectrum, whereas active systems like SAR emit their signal, meaning they can capture data through clouds or at night. This becomes a big selling point for an area like the UK where optical data capture might get severely compromised due to cloud cover.  
+
+Other lecture topics were about electromagnetic wave interaction with Earth surface and atmosphere, including scattering, absorption, and reflection. I enjoyed the everyday science examples, like why the sky is blue or why the ocean appears blue, because they made abstract physical concepts more accessible. Another highlight was the introduction of the four major types of resolution in remote sensing: spatial, spectral, temporal, and radiometric. Each of these resolutions is important in programmed use of data, and in view of this, their word combinations present the challenges of actual analysis.  
+
+Although we have yet to do any labs, the lecture mentioned SNAP and R. I am sure these are the environments that will be used to load and process Landsat and Sentinel data. Next week, I strongly look forward to getting my hands dirty and seeing theory put into practice.  
+
+---
+
+## Applications  
+
+The lecture provided me with some insight into why there are different strengths and weaknesses with different sensors and how mixing datasets is a powerful solution. Gao et al. (2006) are a good example to learn from as the authors lead the way in investigating the fusion of MODIS and Landsat data. MODIS provides images frequently but does not provide a good resolution of the data. More detailed photographs are taken by Landsat, however, these have a lower rate of acquisition only once every 16 days.  
+
+Responding to such a dilemma, Gao et al. (2006) recommend a fusion based mechanism for tracking and predicting Landsat reflectance at daily intervals, using Landsat data and MODIS data. In this case, they found a way out of real-world constraints with ingenious tactical data analysis. It means that there exists an approach depending on such factors to overcome the design limitations which are seemingly insurmountable.  
+
+Another proved point is the work by Hemati et al. (2021) which provides a comprehensive survey of the use of Landsat in environmental monitoring for 5 decades. The authors also point out that Landsat is useful in studying aspects of urbanization, deforestation, agriculture, and natural catastrophes. Another emphasized change was in the radiometric resolution that was made much better to allow for the detection of smaller changes. More about changes in Landsat would not apply because the technology is too advanced to very small changes of surface reflectance which the contrast with the older technology is quite immodest.  
+
+---
+
+## Reflection  
+
+Up to this point, my vision towards remote sensing was closely connected with its beautiful satellite images and climate reports. Currently, it is perceived as a professional technique which involves an analysis of intricate interrelation of parameters with respect to difficult decisions with respect to sensor options, data types, location and presence of contaminants in the atmosphere.  
+
+The facet that captivated me in particular was the spectral signatures: in other words, every object on the globe absorbs and reproduces the radiant energy differently based on its nature. This serves as a great potential on environmental research from forest cutting watch to plant diseased detection to infrastructure mapping. For me, the most practical lesson was the remote sensing getting off high horses and discovering how it works instead of just reading the narcissistic loftiness of other intellectuals.  
+
+They also referred to remote sensing data, not geographic clockwise paper and shaped blue areas (fundamental units for object-based classification, geometry). They contended that perhaps as a result of that very complexity, it was evident that remote sensing had not been widely incorporated into municipal datasets by developers—suggesting that perhaps as a result of that very complexity. But with things like Google Earth Engine at our disposal, and the availability of Landsat and Sentinel data, one could definitely foresee the potential in remote sensing as a means of enhancing the view of spatial data and such analytical techniques, especially in areas remote from in-situ data.  
+
+Personally, I support the idea of using remote sensing in urban climate planning and management efforts.  
+
+---
+
+## References  
+
+- Gao, F., Masek, J., Schwaller, M. and Hall, F., 2006. *On the blending of the Landsat and MODIS surface reflectance: Predicting daily Landsat surface reflectance*. IEEE Transactions on Geoscience and Remote Sensing, 44(8), pp.2207-2218.  
+- Hemati, M., Hasanlou, M., Mahdianpari, M. and Mohammadimanesh, F., 2021. *A systematic review of Landsat data for change detection applications: 50 years of monitoring the Earth*. Remote Sensing, 13(15), p.2869.  
