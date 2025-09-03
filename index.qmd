@@ -2,7 +2,7 @@
 
 This site contains my learning diary entries for the course CASA0023 Remotely Sensing Cities and Environments at UCL.  
 Each week includes reflections, applications, and references, together with any outputs from practicals or readings.  
+Prior to CASA, I was graduated from UCL Department of Geography with BA Geography with Social Data Science. It was where my exploration of GIS, cartography, and quantitative analysis began. Also from there I found my interest in the dynamics and mobility of urban space, which encouraged me to seek more experience at CASA.
 
 #### Acknowledgements:
-
 This site is built using [Quarto](https://quarto.org/).
