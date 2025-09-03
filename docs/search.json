@@ -50,43 +50,133 @@
     ]
   },
   {
+    "objectID": "week2.html",
+    "href": "week2.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Xaringan Presentation\nBelow is my short presentation created with Xaringan.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Portfolio</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html",
+    "href": "week3.html",
+    "title": "Corrections",
+    "section": "",
+    "text": "Summary\nIn this week’s lecture we learned about the main types of corrections applied to remote sensing data. These corrections are important because the raw satellite images contain a lot of noise and errors. If we use them directly, the results can be misleading.\nThe first part was about radiometric correction. We covered how sensors record digital numbers (DNs), which are not yet physical units. Radiometric correction changes these DNs into radiance or reflectance values that are comparable across time and sensors. An example is gain and bias adjustment. Another key method is Dark Object Subtraction (DOS), which assumes that some pixels in an image should be completely dark, and subtracts the brightness value from the whole image. This helps remove haze.\nThe lecture also included atmospheric correction. Light interacts with the atmosphere through scattering and absorption, which changes how surfaces look in satellite images. Methods like DOS are simple, but there are also more advanced approaches such as the 6S and Py6S models or empirical line correction.\nFinally, we looked at geometric correction. This is about aligning images to the Earth’s coordinates. Without geometric correction, images from different dates or sensors will not match up properly. Orthorectification using ground control points is the standard way to fix this.\nThe practical showed how to apply some of these corrections in R using RStoolbox. We tested DOS, did resampling, and tried image enhancement techniques such as band ratios and texture filters. These tasks helped me understand that corrections are not just theory but can be implemented with code in a clear workflow.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#applications",
+    "href": "week3.html#applications",
+    "title": "Corrections",
+    "section": "Applications",
+    "text": "Applications\nThe corrections we learned about are important for many real applications. A simple example is vegetation monitoring using NDVI. If the data is not corrected, NDVI values may change because of atmospheric haze or sensor drift rather than real vegetation differences. After correction, the index is more reliable.\nIn urban studies, geometric correction is essential. If we want to compare land cover change in a city over time, the images must be aligned to the same coordinates. Otherwise, the change we see might just be because the images do not overlap properly.\nDisaster management is another area. For example, flood mapping with satellite imagery requires radiometric and geometric corrections. This ensures that the flood extent maps are accurate enough to support emergency response.\nMulti-sensor studies also depend on correction. For example, combining Landsat and Sentinel images can give a longer time series. But without radiometric correction, the values from each sensor would not be directly comparable. Similarly, atmospheric correction is needed if we want to compare across different seasons.\nThe lecture also mentioned image enhancements. Ratios, filters, and texture metrics are often used to improve classification. Texture measures such as entropy or contrast are helpful for distinguishing urban areas from natural vegetation. Pan-sharpening is another example, where a high-resolution panchromatic band is combined with lower resolution multispectral bands to produce a sharper image. These enhancements all rely on the data being corrected first.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#reflection",
+    "href": "week3.html#reflection",
+    "title": "Corrections",
+    "section": "Reflection",
+    "text": "Reflection\nBefore this week I thought corrections were just small adjustments, but now I understand that they are a necessary first step in any remote sensing workflow. If the data is not corrected, the rest of the analysis can be wrong. I also found it interesting that some corrections are simple, like DOS, while others require more advanced models.\nThe practical was useful because I could see the difference before and after applying corrections. For example, after DOS the haze was reduced and the image looked much clearer. It showed me that even simple corrections can improve image quality a lot. I also learned that there is always a trade-off between simplicity and accuracy. DOS is fast and easy, but models like 6S give more precise results if you have the extra data and time.\nAlthough I am not using remote sensing for my dissertation, I see a parallel with my transport data project. In the same way that satellite images need corrections, transport data also needs cleaning and adjustment. For example, I need to account for strike days or unusual events, otherwise the recovery patterns in Underground stations will not be reliable. This made me realise that corrections are really about making data trustworthy, no matter what type of data it is.\nOverall, I think this week’s lecture and practical were important because they emphasised data quality. It is easy to focus on analysis methods, but without corrections at the start, any advanced model may give misleading results.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week3.html#references",
+    "href": "week3.html#references",
+    "title": "Corrections",
+    "section": "References",
+    "text": "References\n\nMacLachlan, A. (2023). CASA0023 Lecture 3: Remote Sensing Data. Slides\n\nMacLachlan, A. (2023). CASA0023 Practical 3: Corrections. Lab material\n\nJensen, J.R. (2015). Introductory Digital Image Processing: A Remote Sensing Perspective. Pearson.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Corrections</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html",
+    "href": "week4.html",
+    "title": "Policy: Case Study",
+    "section": "",
+    "text": "Summary\nIn this case study I focused on transport resilience in London. Transport is critical to how the city functions, but it is also vulnerable to climate change. Recent years have shown how heavy rainfall and extreme heat can cause major disruptions, especially on the Underground and rail networks. Flooding can close stations and damage electrical systems, while heatwaves can deform tracks and create unsafe conditions for passengers. These risks are likely to grow as climate change progresses.\nThe Mayor’s Transport Strategy (GLA, 2018) and London’s broader Climate Resilience Strategy both highlight the need to make the city’s transport network more adaptive. The key policy goal is to ensure that services continue to operate safely and reliably even when weather extremes become more frequent. Traditional monitoring approaches—such as drainage inspections or trackside sensors—are important but limited in scope. They provide localised data but cannot give a full city-wide view.\nRemote sensing offers a way to complement these systems. Satellites provide consistent, repeatable coverage across large areas, which is valuable in a city as complex as London. Remote sensing cannot replace detailed ground observations, but it can reveal patterns that matter to long-term resilience. For example, satellites can show where heat islands overlap with busy stations, or where land cover changes may be increasing flood exposure. This information can help policymakers anticipate risks and target investments.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy: Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#applications",
+    "href": "week4.html#applications",
+    "title": "Policy: Case Study",
+    "section": "Applications",
+    "text": "Applications\nSeveral types of remote sensing data are relevant to transport resilience in London:\n\nFlooding and surface water detection: Sentinel-1 SAR can detect flood extents even under cloud cover. This is useful for mapping where flash floods accumulate and whether key transport nodes are affected. After heavy rain, SAR could show which stations or track sections are in low-lying, flood-prone areas.\nUrban heat islands: Landsat and MODIS thermal sensors can highlight hotspots across the city. For transport, this matters because overheated rail tracks or bus depots can cause service interruptions. Linking thermal maps with ridership data could show which stations are most exposed to heat risks.\nLand cover and impermeable surfaces: Sentinel-2 imagery can identify changes in green cover or new developments around stations. More impermeable surfaces often mean higher flood risk. Tracking these changes helps policymakers anticipate where drainage or adaptation measures will be needed.\nSupporting policy interventions: Remote sensing evidence can support investments in green infrastructure near transport assets. Examples include adding green roofs, reflective surfaces, or improved drainage around vulnerable stations. Policymakers can use satellite data to decide which areas to prioritise and then monitor the effectiveness of those measures over time.\n\nTogether, these applications demonstrate how Earth observation can extend the reach of policy. While TfL collects large amounts of operational data, satellites add the broader environmental perspective that is often missing from planning.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy: Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#reflection",
+    "href": "week4.html#reflection",
+    "title": "Policy: Case Study",
+    "section": "Reflection",
+    "text": "Reflection\nAt first, I did not think of remote sensing as being relevant to transport policy. I assumed transport resilience would mainly rely on engineering solutions and local monitoring. However, this case study showed me that satellites provide important context that ground systems cannot cover. For example, thermal imagery reveals how heat islands affect entire neighbourhoods, which individual temperature sensors would miss. Similarly, SAR can detect flooding across the city at once, rather than only where sensors are installed.\nI found it interesting that the strength of remote sensing is not in giving precise, street-level data but in highlighting patterns that matter to decision-makers. Policymakers do not just need raw numbers, they need to see which areas of the network are more at risk and how those risks are changing. This reminded me that remote sensing is as much about communication as measurement.\nReflecting on my own dissertation, I can see parallels. Just as I have to clean and normalise transport data to make recovery trends reliable, remote sensing data needs preprocessing and correction to be useful. In both cases, the goal is the same: produce trustworthy information that supports decisions. This helped me realise that transport resilience is not just about infrastructure, but also about how well we use data to anticipate and manage risks.\nOverall, this exercise showed me that policy-relevant analysis often depends on integrating different datasets. Remote sensing adds an environmental layer to transport planning, and that combination is essential for resilience in a city like London.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy: Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "week4.html#references",
+    "href": "week4.html#references",
+    "title": "Policy: Case Study",
+    "section": "References",
+    "text": "References\n\nMacLachlan, A. (2025). Lecture 4: Policy Applications. CASA0023 course slides.\n\nGreater London Authority (2018). Mayor’s Transport Strategy. London.gov.uk.\n\nLondon Climate Resilience Review (2023). Transport and Infrastructure.\n\nEuropean Space Agency. Sentinel-1 SAR User Guide; Sentinel-2 User Guide.\n\nVoogt, J.A. & Oke, T.R. (2003). Thermal remote sensing of urban climates. Remote Sensing of Environment, 86(3), 370–384.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Policy: Case Study</span>"
+    ]
+  },
+  {
     "objectID": "week5.html",
     "href": "week5.html",
-    "title": "Google Earth Engine I",
+    "title": "Google Earth Engine",
     "section": "",
     "text": "Summary\nGeography—this week introduced Google Earth Engine (GEE), the cloud platform for planetary-scale geospatial analysis. In its capabilities it combines a multi-petabyte archive of satellite imagery, enabling an investigator to analyse and visualise changes on the Earth’s surface directly from a browser through the APIs of JavaScript or Python. One of the best things of this platform is that it is very accessible; rather than forcing a user to download terabytes of satellite data locally, the user accesses one of the many pre-hosted image collections such as Landsat, Sentinel, MODIS, and many others, and can execute their highly complicated algorithm right there in the cloud.\nWe also learned about zonal statistics types such as using reduceRegion() for summarising pixel values over a feature, or reduceRegions(), which applies the same operation over a feature collection. Time-series processing is covered in the lecture, including linear trend analyses per-pixel using linearFit() and linearRegression() functions. With these functions, users can detect long-term patterns such as vegetation change or urban growth; I was not aware that it was so straightforward to do this within a browser-based tool.\nThe practical section gave examples of computing NDVI in GEE, filtering satellite images by date and cloud cover, clipping them to the region of interest, and then applying reducers to summarise data over time and space. We did not undertake a full analysis just yet, but these code examples were relevant and helpful, and I now feel capable of writing my own scripts in GEE.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine I</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
   },
   {
     "objectID": "week5.html#applications",
     "href": "week5.html#applications",
-    "title": "Google Earth Engine I",
+    "title": "Google Earth Engine",
     "section": "Applications",
     "text": "Applications\nThe introduced tools are potentially suited for a wide range of environmental monitoring and change-detection tasks. In the words of Doblas et al. (2022), DETER-R is presented as a near-real-time alert system for forest disturbances in the Brazilian Amazon. It is based on Sentinel-1 time series data processed in GEE. Making full use of GEE in managing extensive image collections, deforestation could be monitored even in circumstances of incessant cloud cover, and radar imagery was the key to that ability. The system performs weekly time-series analyses to detect anomalies in backscatter values that may have denoted loss in tree cover.\nThere is ample room for the development of the concepts we covered in class, especially the map() function applied to time series, reducers used to aggregate technical indicators, and classifiers for identifying abrupt changes. Hao et al. (2019) provide another case study on the utilization of GEE in the study of the Three Gorges Reservoir over a period of 15 years in terms of land use change and climate change-induced variations. Their technique included selecting data, setting area and dates, creating masks for clouds, and examining seasonal medians. This closely mirrored what we were learning in class, and showed how GEE facilitates efficient analysis of large datasets across various geographies and timeframes.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine I</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
   },
   {
     "objectID": "week5.html#reflection",
     "href": "week5.html#reflection",
-    "title": "Google Earth Engine I",
+    "title": "Google Earth Engine",
     "section": "Reflection",
     "text": "Reflection\nThis week was very important because I learned more about current geo-spatial data processing procedures that are increasingly cloud-based, including direct sensor integration. The introduction of Google Earth Engine totally changed how I saw remote sensing. In the past, working with satellite images required heavy equipment, powerful computers, and lengthy downloads. Now, many of these barriers have been removed.\nThe use of Google Earth Engine encourages the principles of open science; scripts can be easily shared via links, projects are reproducible, and research is more transparent. This also allows results to be shared with non-professionals, policymakers, or community groups with limited resources. As a consequence, the ability to work with global EO data archives is extremely helpful for those without access to powerful computer infrastructure.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine I</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
   },
   {
     "objectID": "week5.html#references",
     "href": "week5.html#references",
-    "title": "Google Earth Engine I",
+    "title": "Google Earth Engine",
     "section": "References",
     "text": "References\nDoblas, J., Reis, M.S., Belluzzo, A.P., Quadros, C.B., Moraes, D.R., Almeida, C.A., Maurano, L.E., Carvalho, A.F., Sant’Anna, S.J. and Shimabukuro, Y.E., 2022. DETER-R: an operational near-real time tropical forest disturbance warning system based on Sentinel-1 time series analysis. Remote Sensing, 14(15), p.3658.\nHao, B., Ma, M., Li, S., Li, Q., Hao, D., Huang, J., Ge, Z., Yang, H. and Han, X., 2019. Land use change and climate variation in the Three Gorges Reservoir catchment from 2000 to 2015 based on the Google Earth Engine. Sensors, 19(9), p.2118.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine I</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Google Earth Engine</span>"
     ]
   },
   {
@@ -167,6 +257,46 @@
     "text": "References\nBrownlee, J., 2020. LOOCV for Evaluating Machine Learning Algorithms. Machine Learning Mastery, August 26. Available at: https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/\nKarasiak, N., Dejoux, J., Monteil, C., & Sheeren, D., 2021. Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing. Machine Learning, 111(7), pp.2715–2740. https://doi.org/10.1007/s10994-021-05972-1",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Classification II</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html",
+    "href": "week8.html",
+    "title": "Synthetic Aperture Radar (SAR)",
+    "section": "",
+    "text": "Summary\nIn this week’s lecture we learned about Synthetic Aperture Radar (SAR), which is an active remote sensing system. Unlike optical sensors, SAR sends microwave pulses to the Earth and measures how much energy is returned. Because of this, it can operate in all weather conditions and both day and night. This makes it very different from optical imagery, which depends on sunlight and clear skies.\nWe were introduced to the concept of the synthetic aperture. Since satellites cannot carry extremely large antennas, they instead combine signals collected as the satellite moves forward to create the effect of a much larger antenna. This gives SAR its high spatial resolution. The lecture also explained the role of polarisation (such as HH, VV, HV, VH). Different surfaces reflect energy differently depending on their structure and moisture, so polarisation helps interpret land cover.\nSAR data contains both amplitude (backscatter) and phase information. Amplitude shows surface roughness, while phase can be used to measure elevation or movement. This leads to techniques like Interferometric SAR (InSAR), where two SAR images are compared to detect topographic change or ground displacement. Differential InSAR (DInSAR) goes further by removing topographic effects and isolating actual ground motion.\nIn the practical we also looked at how SAR data is stored and displayed. For example, Sentinel-1 data often needs radiometric calibration and log scaling to be viewed properly. Most phase analysis requires specialist tools like SNAP, while in Google Earth Engine we mainly looked at backscatter values. This made it clearer how SAR is both powerful and complex.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Synthetic Aperture Radar (SAR)</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#applications",
+    "href": "week8.html#applications",
+    "title": "Synthetic Aperture Radar (SAR)",
+    "section": "Applications",
+    "text": "Applications\nSAR has many important applications. One of the clearest examples is flood mapping. Because water reflects radar away from the sensor, flooded areas appear very dark in SAR images, making them easy to identify even under cloud cover.\nAnother important use is infrastructure and land monitoring. InSAR can detect very small ground movements over time. This is useful for tracking land subsidence in cities, monitoring the stability of bridges, or even detecting slow landslides. InSAR can also be used to create digital elevation models from phase information.\nSAR is also used in environmental monitoring. Examples include mapping sea ice movement, detecting oil spills, or tracking coastal erosion. Because it works in all conditions, SAR gives more reliable coverage than optical imagery in these environments. Future missions such as NASA-ISRO’s NISAR will expand these capabilities by collecting data at multiple radar frequencies.\nIn the practical we were also shown a more advanced example: using SAR for blast damage assessment. Analysts used Sentinel-1 SAR data to detect changes in Beirut after the explosion. They applied statistical change detection methods (such as pixel-wise t-tests) to find areas where backscatter changed significantly between before and after the event. Even though the exact methods were complex, I understood the main idea—that SAR can provide rapid assessments in disaster situations when optical imagery may not be available. This showed me how flexible SAR is, from environmental science to humanitarian response.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Synthetic Aperture Radar (SAR)</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#reflection",
+    "href": "week8.html#reflection",
+    "title": "Synthetic Aperture Radar (SAR)",
+    "section": "Reflection",
+    "text": "Reflection\nAt first, SAR seemed much harder to understand than optical imagery, especially because of the technical details around polarisation and phase. However, the lecture helped me see the logic behind it. The synthetic aperture idea was particularly interesting, because it explained how satellites can produce detailed radar images without needing giant antennas.\nThe practical also gave me a sense of both the potential and the challenges of working with SAR data. It was clear that SAR requires more preprocessing and specialist tools compared to optical data. For example, visualising phase requires extra software, while Earth Engine is mainly limited to backscatter. This made me realise why SAR is powerful but also less commonly used by beginners.\nI found the flood mapping example easy to understand, and it showed me why SAR is so valuable for emergency response. The blast damage assessment example was harder, but it still helped me appreciate how SAR can be used in advanced ways. Even without following every step, I understood that the key idea is detecting significant changes that indicate building damage.\nAlthough my dissertation is not about remote sensing, I can still see parallels. Just as SAR ensures reliable data even in difficult conditions, I also need to clean and normalise my transport data so that patterns are meaningful. This reminded me that whatever the field, reliable analysis always starts from strong methods of data preparation and consistency.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Synthetic Aperture Radar (SAR)</span>"
+    ]
+  },
+  {
+    "objectID": "week8.html#references",
+    "href": "week8.html#references",
+    "title": "Synthetic Aperture Radar (SAR)",
+    "section": "References",
+    "text": "References\n\nMacLachlan, A. (2022). Lecture 9: SAR data. Slides\n\nMacLachlan, A. (2022). Practical 9: SAR examples. CASA0023 course materials.\n\nRS4OSINT (2020). Blast Damage Assessment using Sentinel-1 SAR. Case study\n\nNASA Earthdata (2021). What is Synthetic Aperture Radar?\n\nWikipedia. Synthetic Aperture Radar; InSAR; Differential InSAR.",
+    "crumbs": [
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Synthetic Aperture Radar (SAR)</span>"
     ]
   }
 ]

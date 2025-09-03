@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Google Earth Engine I</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Google Earth Engine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,8 +158,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -183,8 +192,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this case study I focused on <strong>transport resilience in London</strong>. Transport is critical to how the city functions, but it is also vulnerable to climate change. Recent years have shown how heavy rainfall and extreme heat can cause major disruptions, especially on the Underground and rail networks. Flooding can close stations and damage electrical systems, while heatwaves can deform tracks and create unsafe conditions for passengers. These risks are likely to grow as climate change progresses.</p>
+<p>The <strong>Mayor’s Transport Strategy (GLA, 2018)</strong> and London’s broader <strong>Climate Resilience Strategy</strong> both highlight the need to make the city’s transport network more adaptive. The key policy goal is to ensure that services continue to operate safely and reliably even when weather extremes become more frequent. Traditional monitoring approaches—such as drainage inspections or trackside sensors—are important but limited in scope. They provide localised data but cannot give a full city-wide view.</p>
+<p>Remote sensing offers a way to complement these systems. Satellites provide consistent, repeatable coverage across large areas, which is valuable in a city as complex as London. Remote sensing cannot replace detailed ground observations, but it can reveal patterns that matter to long-term resilience. For example, satellites can show where heat islands overlap with busy stations, or where land cover changes may be increasing flood exposure. This information can help policymakers anticipate risks and target investments.</p>
+</section>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
+<p>Several types of remote sensing data are relevant to transport resilience in London:</p>
+<ul>
+<li><p><strong>Flooding and surface water detection</strong>: Sentinel-1 SAR can detect flood extents even under cloud cover. This is useful for mapping where flash floods accumulate and whether key transport nodes are affected. After heavy rain, SAR could show which stations or track sections are in low-lying, flood-prone areas.</p></li>
+<li><p><strong>Urban heat islands</strong>: Landsat and MODIS thermal sensors can highlight hotspots across the city. For transport, this matters because overheated rail tracks or bus depots can cause service interruptions. Linking thermal maps with ridership data could show which stations are most exposed to heat risks.</p></li>
+<li><p><strong>Land cover and impermeable surfaces</strong>: Sentinel-2 imagery can identify changes in green cover or new developments around stations. More impermeable surfaces often mean higher flood risk. Tracking these changes helps policymakers anticipate where drainage or adaptation measures will be needed.</p></li>
+<li><p><strong>Supporting policy interventions</strong>: Remote sensing evidence can support investments in green infrastructure near transport assets. Examples include adding green roofs, reflective surfaces, or improved drainage around vulnerable stations. Policymakers can use satellite data to decide which areas to prioritise and then monitor the effectiveness of those measures over time.</p></li>
+</ul>
+<p>Together, these applications demonstrate how Earth observation can extend the reach of policy. While TfL collects large amounts of operational data, satellites add the broader environmental perspective that is often missing from planning.</p>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>At first, I did not think of remote sensing as being relevant to transport policy. I assumed transport resilience would mainly rely on engineering solutions and local monitoring. However, this case study showed me that satellites provide important context that ground systems cannot cover. For example, thermal imagery reveals how heat islands affect entire neighbourhoods, which individual temperature sensors would miss. Similarly, SAR can detect flooding across the city at once, rather than only where sensors are installed.</p>
+<p>I found it interesting that the strength of remote sensing is not in giving precise, street-level data but in highlighting patterns that matter to decision-makers. Policymakers do not just need raw numbers, they need to see which areas of the network are more at risk and how those risks are changing. This reminded me that remote sensing is as much about communication as measurement.</p>
+<p>Reflecting on my own dissertation, I can see parallels. Just as I have to clean and normalise transport data to make recovery trends reliable, remote sensing data needs preprocessing and correction to be useful. In both cases, the goal is the same: produce trustworthy information that supports decisions. This helped me realise that transport resilience is not just about infrastructure, but also about how well we use data to anticipate and manage risks.</p>
+<p>Overall, this exercise showed me that policy-relevant analysis often depends on integrating different datasets. Remote sensing adds an environmental layer to transport planning, and that combination is essential for resilience in a city like London.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>MacLachlan, A. (2025). <em>Lecture 4: Policy Applications</em>. CASA0023 course slides.<br>
+</li>
+<li>Greater London Authority (2018). <em>Mayor’s Transport Strategy</em>. London.gov.uk.<br>
+</li>
+<li>London Climate Resilience Review (2023). <em>Transport and Infrastructure</em>.<br>
+</li>
+<li>European Space Agency. <em>Sentinel-1 SAR User Guide</em>; <em>Sentinel-2 User Guide</em>.<br>
+</li>
+<li>Voogt, J.A. &amp; Oke, T.R. (2003). Thermal remote sensing of urban climates. <em>Remote Sensing of Environment</em>, 86(3), 370–384.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -593,8 +640,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week5.html" class="pagination-link" aria-label="Google Earth Engine I">
-        <span class="nav-page-text"><span class="chapter-title">Google Earth Engine I</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./week5.html" class="pagination-link" aria-label="Google Earth Engine">
+        <span class="nav-page-text"><span class="chapter-title">Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

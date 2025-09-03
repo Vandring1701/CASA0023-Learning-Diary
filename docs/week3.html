@@ -135,7 +135,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Google Earth Engine I</span></a>
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Google Earth Engine</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -158,8 +158,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -183,8 +192,41 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this week’s lecture we learned about the main types of corrections applied to remote sensing data. These corrections are important because the raw satellite images contain a lot of noise and errors. If we use them directly, the results can be misleading.</p>
+<p>The first part was about <strong>radiometric correction</strong>. We covered how sensors record digital numbers (DNs), which are not yet physical units. Radiometric correction changes these DNs into radiance or reflectance values that are comparable across time and sensors. An example is <strong>gain and bias</strong> adjustment. Another key method is <strong>Dark Object Subtraction (DOS)</strong>, which assumes that some pixels in an image should be completely dark, and subtracts the brightness value from the whole image. This helps remove haze.</p>
+<p>The lecture also included <strong>atmospheric correction</strong>. Light interacts with the atmosphere through scattering and absorption, which changes how surfaces look in satellite images. Methods like DOS are simple, but there are also more advanced approaches such as the 6S and Py6S models or empirical line correction.</p>
+<p>Finally, we looked at <strong>geometric correction</strong>. This is about aligning images to the Earth’s coordinates. Without geometric correction, images from different dates or sensors will not match up properly. Orthorectification using ground control points is the standard way to fix this.</p>
+<p>The practical showed how to apply some of these corrections in R using <code>RStoolbox</code>. We tested DOS, did resampling, and tried image enhancement techniques such as band ratios and texture filters. These tasks helped me understand that corrections are not just theory but can be implemented with code in a clear workflow.</p>
+</section>
+<section id="applications" class="level2">
+<h2 class="anchored" data-anchor-id="applications">Applications</h2>
+<p>The corrections we learned about are important for many real applications. A simple example is vegetation monitoring using NDVI. If the data is not corrected, NDVI values may change because of atmospheric haze or sensor drift rather than real vegetation differences. After correction, the index is more reliable.</p>
+<p>In urban studies, geometric correction is essential. If we want to compare land cover change in a city over time, the images must be aligned to the same coordinates. Otherwise, the change we see might just be because the images do not overlap properly.</p>
+<p>Disaster management is another area. For example, flood mapping with satellite imagery requires radiometric and geometric corrections. This ensures that the flood extent maps are accurate enough to support emergency response.</p>
+<p>Multi-sensor studies also depend on correction. For example, combining Landsat and Sentinel images can give a longer time series. But without radiometric correction, the values from each sensor would not be directly comparable. Similarly, atmospheric correction is needed if we want to compare across different seasons.</p>
+<p>The lecture also mentioned image enhancements. Ratios, filters, and texture metrics are often used to improve classification. Texture measures such as entropy or contrast are helpful for distinguishing urban areas from natural vegetation. Pan-sharpening is another example, where a high-resolution panchromatic band is combined with lower resolution multispectral bands to produce a sharper image. These enhancements all rely on the data being corrected first.</p>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
+<p>Before this week I thought corrections were just small adjustments, but now I understand that they are a necessary first step in any remote sensing workflow. If the data is not corrected, the rest of the analysis can be wrong. I also found it interesting that some corrections are simple, like DOS, while others require more advanced models.</p>
+<p>The practical was useful because I could see the difference before and after applying corrections. For example, after DOS the haze was reduced and the image looked much clearer. It showed me that even simple corrections can improve image quality a lot. I also learned that there is always a trade-off between simplicity and accuracy. DOS is fast and easy, but models like 6S give more precise results if you have the extra data and time.</p>
+<p>Although I am not using remote sensing for my dissertation, I see a parallel with my transport data project. In the same way that satellite images need corrections, transport data also needs cleaning and adjustment. For example, I need to account for strike days or unusual events, otherwise the recovery patterns in Underground stations will not be reliable. This made me realise that corrections are really about making data trustworthy, no matter what type of data it is.</p>
+<p>Overall, I think this week’s lecture and practical were important because they emphasised data quality. It is easy to focus on analysis methods, but without corrections at the start, any advanced model may give misleading results.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>MacLachlan, A. (2023). CASA0023 Lecture 3: <em>Remote Sensing Data</em>. <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-3/">Slides</a><br>
+</li>
+<li>MacLachlan, A. (2023). CASA0023 Practical 3: <em>Corrections</em>. <a href="https://andrewmaclachlan.github.io/CASA0023/3_corrections.html">Lab material</a><br>
+</li>
+<li>Jensen, J.R. (2015). <em>Introductory Digital Image Processing: A Remote Sensing Perspective</em>. Pearson.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
