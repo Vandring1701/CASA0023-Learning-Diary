@@ -5,34 +5,28 @@ editor: visual
 
 ## Summary
 
-This week focused on **Accuracy Assessment** and **Cross-Validation**. Accuracy assessment is essential for evaluating classification results in terms of reliability, while cross-validation ensures that models generalise effectively.  
+This week focused on **Accuracy Assessment** and **Cross-Validation**. Accuracy assessment is essential for evaluating classification results in terms of reliability, while cross-validation ensures that models generalise effectively.
 
-We learned about measures such as the **Confusion Matrix**, **Overall Accuracy (OA)**, **Producer’s Accuracy**, and **User’s Accuracy**. In particular, the module emphasised **Leave-One-Out Cross-Validation (LOOCV)**, useful when data is scarce or imbalanced. LOOCV involves leaving out one observation for testing while using the rest for training, repeating this for all data points, and then averaging the errors. Although computationally demanding, LOOCV yields reliable numerical results — making it especially relevant in remote sensing tasks where high accuracy is crucial.  
+We learned about measures such as the **Confusion Matrix**, **Overall Accuracy (OA)**, **Producer’s Accuracy**, and **User’s Accuracy**. In particular, the module emphasised **Leave-One-Out Cross-Validation (LOOCV)**, useful when data is scarce or imbalanced. LOOCV involves leaving out one observation for testing while using the rest for training, repeating this for all data points, and then averaging the errors. Although computationally demanding, LOOCV yields reliable numerical results — making it especially relevant in remote sensing tasks where high accuracy is crucial.
 
-Practically, we learned how to sample data in **Google Earth Engine (GEE)**, splitting a region of interest into training and testing sets with `randomColumn()` and `fillerMetadata()`. GEE also provides tools to generate confusion matrices, classification reports, and performance metrics, enhancing spatial data evaluation.  
-
----
+Practically, we learned how to sample data in **Google Earth Engine (GEE)**, splitting a region of interest into training and testing sets with `randomColumn()` and `fillerMetadata()`. GEE also provides tools to generate confusion matrices, classification reports, and performance metrics, enhancing spatial data evaluation.
 
 ## Application
 
-Brownlee (2020) explains that LOOCV is a special case of k-fold cross-validation where only one sample is used for testing at each step. This method maximises training data usage and improves stability and generalisation, though it is computationally expensive. It is especially helpful when overfitting is likely or when data is scarce.  
+Brownlee (2020) explains that LOOCV is a special case of k-fold cross-validation where only one sample is used for testing at each step. This method maximises training data usage and improves stability and generalisation, though it is computationally expensive. It is especially helpful when overfitting is likely or when data is scarce.
 
-Karasiak et al. (2021) discuss limitations of LOOCV, noting that while it has low variance, it can introduce bias in certain conditions. They propose combining it with methods like repeated random allocation or bootstrap for more robust results. Their numerical study compared different cross-validation methods for ranking model parameters, showing that there is no “one-size-fits-all” — methodology choice should depend on data characteristics, task difficulty, and deployment goals.  
-
----
+Karasiak et al. (2021) discuss limitations of LOOCV, noting that while it has low variance, it can introduce bias in certain conditions. They propose combining it with methods like repeated random allocation or bootstrap for more robust results. Their numerical study compared different cross-validation methods for ranking model parameters, showing that there is no “one-size-fits-all” — methodology choice should depend on data characteristics, task difficulty, and deployment goals.
 
 ## Reflection
 
-This week significantly changed my perspective on classification validation. Previously, I often split training and testing data arbitrarily, without standards. Now I appreciate the value of systematic approaches like LOOCV.  
+This week significantly changed my perspective on classification validation. Previously, I often split training and testing data arbitrarily, without standards. Now I appreciate the value of systematic approaches like LOOCV.
 
-LOOCV initially looks like a simple repetition of training and testing, but it carries scientific rigour: even with small or rare datasets, it provides meaningful evaluation. I also realised that effective cross-validation is not just about running it, but about making deliberate choices regarding fold number, hyperparameter tuning, and algorithm selection.  
+LOOCV initially looks like a simple repetition of training and testing, but it carries scientific rigour: even with small or rare datasets, it provides meaningful evaluation. I also realised that effective cross-validation is not just about running it, but about making deliberate choices regarding fold number, hyperparameter tuning, and algorithm selection.
 
-This insight will guide me to design more reliable experiments and avoid misunderstandings in interpreting classification results. Moving forward, I will prioritise structured validation, ensuring my models are robust, reproducible, and credible.  
-
----
+This insight will guide me to design more reliable experiments and avoid misunderstandings in interpreting classification results. Moving forward, I will prioritise structured validation, ensuring my models are robust, reproducible, and credible.
 
 ## References
 
-Brownlee, J., 2020. **LOOCV for Evaluating Machine Learning Algorithms.** *Machine Learning Mastery*, August 26. Available at: <https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/>  
+Brownlee, J., 2020. **LOOCV for Evaluating Machine Learning Algorithms.** *Machine Learning Mastery*, August 26. Available at: <https://machinelearningmastery.com/loocv-for-evaluating-machine-learning-algorithms/>
 
-Karasiak, N., Dejoux, J., Monteil, C., & Sheeren, D., 2021. **Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing.** *Machine Learning*, 111(7), pp.2715–2740. <https://doi.org/10.1007/s10994-021-05972-1>  
+Karasiak, N., Dejoux, J., Monteil, C., & Sheeren, D., 2021. **Spatial dependence between training and test sets: another pitfall of classification accuracy assessment in remote sensing.** *Machine Learning*, 111(7), pp.2715–2740. <https://doi.org/10.1007/s10994-021-05972-1>

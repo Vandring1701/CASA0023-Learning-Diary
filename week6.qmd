@@ -4,55 +4,49 @@ title: "Classification"
 
 ## Summary
 
-Image classification in remote sensing is the major application explored in this week's group. Image classification refers to the process of assigning every pixel an accurate land cover class (e.g., water bodies, vegetation, urban structures) through algorithms, with the result being a land cover map that can easily be interpreted by humans.  
+Image classification in remote sensing is the major application explored in this week's group. Image classification refers to the process of assigning every pixel an accurate land cover class (e.g., water bodies, vegetation, urban structures) through algorithms, with the result being a land cover map that can easily be interpreted by humans.
 
-Two broad classes of classification methods were covered: **Supervised Classification** and **Unsupervised Classification**.  
-- *Supervised classification* uses training samples (feature information labeled by the user) to train classification models.  
-- *Unsupervised classification* clusters pixels automatically based on spectral similarity.  
+Two broad classes of classification methods were covered: **Supervised Classification** and **Unsupervised Classification**.\
+- *Supervised classification* uses training samples (feature information labeled by the user) to train classification models.\
+- *Unsupervised classification* clusters pixels automatically based on spectral similarity.
 
-The reliability of training samples was emphasized: poor training sites reduce classification accuracy and undermine validation (as highlighted in Samara et al.). Accuracy close to 100% cannot be judged without methods like the **Confusion Matrix**, **Overall Accuracy**, and **Kappa Coefficient**, which assess correctness and model generalization.  
+The reliability of training samples was emphasized: poor training sites reduce classification accuracy and undermine validation (as highlighted in Samara et al.). Accuracy close to 100% cannot be judged without methods like the **Confusion Matrix**, **Overall Accuracy**, and **Kappa Coefficient**, which assess correctness and model generalization.
 
-In practice, we implemented a workflow in **Google Earth Engine (GEE)**:  
-1. Draw ROI samples  
-2. Group classes for training  
-3. Select classifiers (CART or SVM)  
-4. Run classification  
-5. Visualize and evaluate results  
+In practice, we implemented a workflow in **Google Earth Engine (GEE)**:\
+1. Draw ROI samples\
+2. Group classes for training\
+3. Select classifiers (CART or SVM)\
+4. Run classification\
+5. Visualize and evaluate results
 
-This week’s topics showed strong applicability to real research contexts.  
-
----
+This week’s topics showed strong applicability to real research contexts.
 
 ## Application
 
-Zak and Cabido (2002) conducted a vegetation study in the Chaco region of Argentina, combining ground-based community registries, photogrammetric aerial images, and spectral reflectance. Vegetation type strongly influenced band reflectance, forming the basis for classification.  
+Zak and Cabido (2002) conducted a vegetation study in the Chaco region of Argentina, combining ground-based community registries, photogrammetric aerial images, and spectral reflectance. Vegetation type strongly influenced band reflectance, forming the basis for classification.
 
-Another study by Deval and Joshi (2022) assessed vegetation and land cover mapping in semi-arid wetlands of India using **MLC, SVM, and RF** classifiers. Results showed **SVM** performed best when spectral overlaps between classes were high, confirming its strength in handling inseparable and nonlinear datasets.  
+Another study by Deval and Joshi (2022) assessed vegetation and land cover mapping in semi-arid wetlands of India using **MLC, SVM, and RF** classifiers. Results showed **SVM** performed best when spectral overlaps between classes were high, confirming its strength in handling inseparable and nonlinear datasets.
 
-These examples illustrate how image classification can bridge zonal vs. fine-scale assessments, and how classifier choice affects outputs in ecological and climate-related research.  
-
----
+These examples illustrate how image classification can bridge zonal vs. fine-scale assessments, and how classifier choice affects outputs in ecological and climate-related research.
 
 ## Reflection
 
-I learned that classification of remote sensing imagery requires much more than automated sorting. It demands:  
-- Careful training sample selection  
-- Parameter tuning  
-- Justification of classifier choice  
-- Thoughtful evaluation approaches  
+I learned that classification of remote sensing imagery requires much more than automated sorting. It demands:\
+- Careful training sample selection\
+- Parameter tuning\
+- Justification of classifier choice\
+- Thoughtful evaluation approaches
 
-The GEE code provided in class helped visualize how different classifiers split data, reinforcing that **trial, comparison, and iteration** are essential to robust analysis.  
+The GEE code provided in class helped visualize how different classifiers split data, reinforcing that **trial, comparison, and iteration** are essential to robust analysis.
 
-I also realized how classifier characteristics affect applications:  
-- **CART** is hard to calibrate but useful in structured datasets.  
-- **SVM** handles high-dimensional, small-sample, nonlinear datasets better.  
+I also realized how classifier characteristics affect applications:\
+- **CART** is hard to calibrate but useful in structured datasets.\
+- **SVM** handles high-dimensional, small-sample, nonlinear datasets better.
 
-This learning will support my own project on **urban heat islands**, where classification of land cover (green spaces vs. soil surfaces) will be a fundamental step.  
-
----
+This learning will support my own project on **urban heat islands**, where classification of land cover (green spaces vs. soil surfaces) will be a fundamental step.
 
 ## References
 
-Zak, M.R. and Cabido, M., 2002. *Spatial patterns of the Chaco vegetation of central Argentina: Integration of remote sensing and phytosociology*. Applied Vegetation Science, 5(2), pp.213–226.  
+Zak, M.R. and Cabido, M., 2002. *Spatial patterns of the Chaco vegetation of central Argentina: Integration of remote sensing and phytosociology*. Applied Vegetation Science, 5(2), pp.213–226.
 
-Deval, K. and Joshi, P.K., 2022. *Vegetation type and land cover mapping in a semi-arid heterogeneous forested wetland of India: Comparing image classification algorithms*. Environment, Development and Sustainability, 24(3), pp.3947–3966.  
+Deval, K. and Joshi, P.K., 2022. *Vegetation type and land cover mapping in a semi-arid heterogeneous forested wetland of India: Comparing image classification algorithms*. Environment, Development and Sustainability, 24(3), pp.3947–3966.

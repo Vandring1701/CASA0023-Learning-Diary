@@ -197,20 +197,17 @@ ul.task-list li input[type="checkbox"] {
 <p>This week focused on <strong>Accuracy Assessment</strong> and <strong>Cross-Validation</strong>. Accuracy assessment is essential for evaluating classification results in terms of reliability, while cross-validation ensures that models generalise effectively.</p>
 <p>We learned about measures such as the <strong>Confusion Matrix</strong>, <strong>Overall Accuracy (OA)</strong>, <strong>Producer’s Accuracy</strong>, and <strong>User’s Accuracy</strong>. In particular, the module emphasised <strong>Leave-One-Out Cross-Validation (LOOCV)</strong>, useful when data is scarce or imbalanced. LOOCV involves leaving out one observation for testing while using the rest for training, repeating this for all data points, and then averaging the errors. Although computationally demanding, LOOCV yields reliable numerical results — making it especially relevant in remote sensing tasks where high accuracy is crucial.</p>
 <p>Practically, we learned how to sample data in <strong>Google Earth Engine (GEE)</strong>, splitting a region of interest into training and testing sets with <code>randomColumn()</code> and <code>fillerMetadata()</code>. GEE also provides tools to generate confusion matrices, classification reports, and performance metrics, enhancing spatial data evaluation.</p>
-<hr>
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application">Application</h2>
 <p>Brownlee (2020) explains that LOOCV is a special case of k-fold cross-validation where only one sample is used for testing at each step. This method maximises training data usage and improves stability and generalisation, though it is computationally expensive. It is especially helpful when overfitting is likely or when data is scarce.</p>
 <p>Karasiak et al.&nbsp;(2021) discuss limitations of LOOCV, noting that while it has low variance, it can introduce bias in certain conditions. They propose combining it with methods like repeated random allocation or bootstrap for more robust results. Their numerical study compared different cross-validation methods for ranking model parameters, showing that there is no “one-size-fits-all” — methodology choice should depend on data characteristics, task difficulty, and deployment goals.</p>
-<hr>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection">Reflection</h2>
 <p>This week significantly changed my perspective on classification validation. Previously, I often split training and testing data arbitrarily, without standards. Now I appreciate the value of systematic approaches like LOOCV.</p>
 <p>LOOCV initially looks like a simple repetition of training and testing, but it carries scientific rigour: even with small or rare datasets, it provides meaningful evaluation. I also realised that effective cross-validation is not just about running it, but about making deliberate choices regarding fold number, hyperparameter tuning, and algorithm selection.</p>
 <p>This insight will guide me to design more reliable experiments and avoid misunderstandings in interpreting classification results. Moving forward, I will prioritise structured validation, ensuring my models are robust, reproducible, and credible.</p>
-<hr>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
