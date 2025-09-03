@@ -17,3 +17,8 @@ book:
     - week8.qmd
 
 number-sections: false
+
+format:
+  html:
+    theme: solar
+    css: styles.css
