@@ -1,4 +1,41 @@
 ---
 title: "Synthetic Aperture Radar (SAR)"
-editor: visual
 ---
+
+## Summary
+
+In this week’s lecture we learned about **Synthetic Aperture Radar (SAR)**, which is an active remote sensing system. Unlike optical sensors, SAR sends microwave pulses to the Earth and measures how much energy is returned. Because of this, it can operate in all weather conditions and both day and night. This makes it very different from optical imagery, which depends on sunlight and clear skies.
+
+We were introduced to the concept of the **synthetic aperture**. Since satellites cannot carry extremely large antennas, they instead combine signals collected as the satellite moves forward to create the effect of a much larger antenna. This gives SAR its high spatial resolution. The lecture also explained the role of **polarisation** (such as HH, VV, HV, VH). Different surfaces reflect energy differently depending on their structure and moisture, so polarisation helps interpret land cover.  
+
+SAR data contains both **amplitude (backscatter)** and **phase** information. Amplitude shows surface roughness, while phase can be used to measure elevation or movement. This leads to techniques like **Interferometric SAR (InSAR)**, where two SAR images are compared to detect topographic change or ground displacement. **Differential InSAR (DInSAR)** goes further by removing topographic effects and isolating actual ground motion.  
+
+In the practical we also looked at how SAR data is stored and displayed. For example, Sentinel-1 data often needs radiometric calibration and log scaling to be viewed properly. Most phase analysis requires specialist tools like SNAP, while in Google Earth Engine we mainly looked at backscatter values. This made it clearer how SAR is both powerful and complex.
+
+## Applications
+
+SAR has many important applications. One of the clearest examples is **flood mapping**. Because water reflects radar away from the sensor, flooded areas appear very dark in SAR images, making them easy to identify even under cloud cover.  
+
+Another important use is **infrastructure and land monitoring**. InSAR can detect very small ground movements over time. This is useful for tracking land subsidence in cities, monitoring the stability of bridges, or even detecting slow landslides. InSAR can also be used to create digital elevation models from phase information.  
+
+SAR is also used in **environmental monitoring**. Examples include mapping sea ice movement, detecting oil spills, or tracking coastal erosion. Because it works in all conditions, SAR gives more reliable coverage than optical imagery in these environments. Future missions such as NASA-ISRO’s NISAR will expand these capabilities by collecting data at multiple radar frequencies.  
+
+In the practical we were also shown a more advanced example: using SAR for **blast damage assessment**. Analysts used Sentinel-1 SAR data to detect changes in Beirut after the explosion. They applied statistical change detection methods (such as pixel-wise t-tests) to find areas where backscatter changed significantly between before and after the event. Even though the exact methods were complex, I understood the main idea—that SAR can provide rapid assessments in disaster situations when optical imagery may not be available. This showed me how flexible SAR is, from environmental science to humanitarian response.
+
+## Reflection
+
+At first, SAR seemed much harder to understand than optical imagery, especially because of the technical details around polarisation and phase. However, the lecture helped me see the logic behind it. The synthetic aperture idea was particularly interesting, because it explained how satellites can produce detailed radar images without needing giant antennas.  
+
+The practical also gave me a sense of both the potential and the challenges of working with SAR data. It was clear that SAR requires more preprocessing and specialist tools compared to optical data. For example, visualising phase requires extra software, while Earth Engine is mainly limited to backscatter. This made me realise why SAR is powerful but also less commonly used by beginners.  
+
+I found the flood mapping example easy to understand, and it showed me why SAR is so valuable for emergency response. The blast damage assessment example was harder, but it still helped me appreciate how SAR can be used in advanced ways. Even without following every step, I understood that the key idea is detecting significant changes that indicate building damage.  
+
+Although my dissertation is not about remote sensing, I can still see parallels. Just as SAR ensures reliable data even in difficult conditions, I also need to clean and normalise my transport data so that patterns are meaningful. This reminded me that whatever the field, reliable analysis always starts from strong methods of data preparation and consistency.
+
+## References
+
+- MacLachlan, A. (2022). *Lecture 9: SAR data*. [Slides](https://andrewmaclachlan.github.io/CASA0023-lecture-9/)  
+- MacLachlan, A. (2022). *Practical 9: SAR examples*. CASA0023 course materials.  
+- RS4OSINT (2020). *Blast Damage Assessment using Sentinel-1 SAR*. [Case study](https://bellingcat.github.io/RS4OSINT/C3_Blast.html)  
+- NASA Earthdata (2021). *What is Synthetic Aperture Radar?*  
+- Wikipedia. *Synthetic Aperture Radar*; *InSAR*; *Differential InSAR*.  
