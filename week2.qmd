@@ -8,7 +8,7 @@ Below is my short presentation created with Xaringan.
 
 ```{r, echo=FALSE}
 xaringanExtra::embed_xaringan(
-  url = "week2_slides.html",
+  url = "https://vandring1701.github.io/CASA0023-Learning-Diary/week2_slides.html",
   ratio = "4:3"
 )
 ```
